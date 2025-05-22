@@ -39,7 +39,7 @@ public:
     Product(int id, const std::string& name, double price, int quantity, const std::string& category)
         : id(id), name(name), price(price), quantity(quantity), category(category) {}
 
-    // Getters
+
     int getId() const { return id; }
     std::string getName() const { return name; }
     double getPrice() const { return price; }
