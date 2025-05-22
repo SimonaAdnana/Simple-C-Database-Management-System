@@ -20,14 +20,14 @@ public:
     Product(int id, const std::string& name, double price, int quantity, const std::string& category)
         : id(id), name(name), price(price), quantity(quantity), category(category) {}
 
-    // Getters
+   
     int getId() const { return id; }
     std::string getName() const { return name; }
     double getPrice() const { return price; }
     int getQuantity() const { return quantity; }
     std::string getCategory() const { return category; }
 
-    // Setters
+  
     void setPrice(double newPrice) { price = newPrice; }
     void setQuantity(int newQuantity) { quantity = newQuantity; }
 
@@ -61,7 +61,7 @@ public:
     User(int id, const std::string& username, const std::string& password, const std::string& role)
         : id(id), username(username), password(password), role(role) {}
 
-    // Getters
+   
     int getId() const { return id; }
     std::string getUsername() const { return username; }
     std::string getRole() const { return role; }
@@ -89,18 +89,17 @@ public:
     Order(int id, int userId)
         : id(id), userId(userId), status("pending"), totalAmount(0.0) {}
 
-    // Getters
+   
     int getId() const { return id; }
     int getUserId() const { return userId; }
     std::string getStatus() const { return status; }
     double getTotalAmount() const { return totalAmount; }
     const std::vector<std::pair<int, int>>& getItems() const { return items; }
 
-    // Setters
     void setStatus(const std::string& newStatus) { status = newStatus; }
     void setTotalAmount(double amount) { totalAmount = amount; }
 
-    // Methods
+  
     void addItem(int productId, int quantity) {
         // Check if product already exists in order
         auto it = std::find_if(items.begin(), items.end(),
